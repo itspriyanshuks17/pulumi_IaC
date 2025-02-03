@@ -27,7 +27,7 @@ lambda_archive = pulumi.AssetArchive({
 
 
 # Create Lambda Function
-lambda_function = aws.lambda_.Function("additionLambda",
+lambda_function = aws.lambda_.Function("additionLambda-by-sp",
     runtime="python3.9",
     role=lambda_role.arn,
     handler="addition.lambda_handler",
