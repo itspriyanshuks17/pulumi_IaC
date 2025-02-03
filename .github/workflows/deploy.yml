@@ -23,8 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r pulumi/requirements.txt
-          pip install -r lambda/requirements.txt
+          pip install -r iac-l1/requirements.txt
+          pip install -r iac-l1/lambda/requirements.txt
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
