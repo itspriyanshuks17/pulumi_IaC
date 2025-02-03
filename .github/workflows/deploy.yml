@@ -33,6 +33,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
+      - name: Set Pulumi Access Token
+        run: echo "PULUMI_ACCESS_TOKEN=${{ secrets.PULUMI_ACCESS_TOKEN }}" >> $GITHUB_ENV
+
       - name: Deploy with Pulumi
         run: |
           export PATH=$HOME/.pulumi/bin:$PATH
