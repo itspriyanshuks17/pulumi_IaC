@@ -1,0 +1,11 @@
+name: iac-l1
+description: Experimental for GitHub Actions
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python
