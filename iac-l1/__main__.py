@@ -27,12 +27,27 @@ lambda_archive = pulumi.AssetArchive({
 
 
 # Create Lambda Function
-lambda_function = aws.lambda_.Function("additionLambda-by-sp",
+lambda_function = aws.lambda_.Function("additionLambda-by-sp-3",
     runtime="python3.9",
     role=lambda_role.arn,
     handler="addition.lambda_handler",
     code=lambda_archive,
 )
+
+lambda_function = aws.lambda_.Function("additionLambda-2",
+    runtime="python3.9",
+    role=lambda_role.arn,
+    handler="addition.lambda_handler",
+    code=lambda_archive,
+)
+
+lambda_function = aws.lambda_.Function("PriyanshuKSharma",
+    runtime="python3.9",
+    role=lambda_role.arn,
+    handler="addition.lambda_handler",
+    code=lambda_archive,
+)
+
 
 # Export Lambda Function Name
 pulumi.export("lambda_function_name", lambda_function.name)
