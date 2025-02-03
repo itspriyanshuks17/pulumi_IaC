@@ -39,5 +39,6 @@ jobs:
       - name: Deploy with Pulumi
         run: |
           export PATH=$HOME/.pulumi/bin:$PATH
+          cd iac-l1
           pulumi stack select dev
           pulumi up --yes
