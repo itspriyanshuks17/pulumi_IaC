@@ -50,4 +50,6 @@ lambda_function4 = aws.lambda_.Function("PriyanshuKSharma-2",
 
 
 # Export Lambda Function Name
-pulumi.export("lambda_function_name", lambda_function.name)
+pulumi.export("lambda_function_1", lambda_function2.name)
+pulumi.export("lambda_function_2", lambda_function4.name)
+pulumi.export("lambda_function_3", lambda_function3.name)
